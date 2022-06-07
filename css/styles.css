@@ -1,51 +1,176 @@
-
-body {
-  
-  font-family: 'Open Sans', sans-serif;
-  margin:0;
- }
-
-
-
- /* navigation */
-
-.logo, .highlight-color {
-   font-size: 1.5rem;
-   font-weight: 700;
- }
- .highlight-color {
-   color: red;
- }
- .logo {
-
-border: 2px solid red;
- }
-
- .search-bar {
-   background: #E8E8E8;
-   color:#AEAEAE;
-   border-radius: 20px;
-   width: 40%;
-   padding: .5em 1em;
- 
-  
- }
-/* hamburger menu animation */
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-weight:700;
-  
+
 }
 
+ /* div {
+  border: red solid 1px;
+}     */
+
+body {
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  background: #F2F3F7;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 3rem;
+  padding:0;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+.subtitle {
+  font-weight: 700;
+}
+
+.figure {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.conservation-status {
+  color: red;
+  font-weight: bold;
+}
+
+.text-figure {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.text-figure-highlight {
+  color: red;
+  text-decoration: none;
+}
+
+
+
+
+/* boxes and wrappers */
+.trend-wrapper {
+  background: #CFFFC7;
+  max-width: fit-content;
+  padding: .5em 1em;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #43A35E;
+}
+
+
+/* Layout */
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em em
+}
+
+.col {
+  width: 50%;
+background: #fff;
+margin: 0em 1em;
+padding: 2em;
+border-radius: 10px;
+}
+
+.col-2 {
+  margin: 1em 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+ .infobox {
+   background: #fff;
+   margin-bottom: 1em;
+   border-radius: 15px;
+   padding: 2em 2em;
+ }
+
+ .col-3 {
+   background: none;
+   padding: 0;
+ }
+ .col-4 {
+   margin: 0;
+   padding: 0;
+ }
+
+/* breadcrumb menu */
+
+.bc {
+  background: #F8F8F8;
+  padding: .5em .5em;
+}
+
+.bc-link {
+  color: grey;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.bc-current {
+  color: #AEAEAE;
+}
+
+.bc-link:hover {
+  text-decoration: underline;
+}
+
+/* navigation */
+
+.logo,
+.highlight-color {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.highlight-color {
+  color: red;
+}
+
+.logo {
+
+  border: 2px solid red;
+}
+
+.search-bar {
+  background: #E8E8E8;
+  color: #AEAEAE;
+  border-radius: 20px;
+  width: 40%;
+  padding: .5em 1em;
+
+
+}
+
+/* hamburger menu animation */
+
 .navbar {
+
   background-color: white;
   color: black;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  eight: 100px;
   border: 2px solid red;
 
 }
@@ -58,7 +183,7 @@ border: 2px solid red;
 
 .nav-list {
   list-style-type: none;
-  
+
   padding-top: 10px;
 
 }
@@ -66,11 +191,12 @@ border: 2px solid red;
 .nav-list .list-item {
   display: inline-block;
   padding: 15px 10px;
-  
+
 }
 
 .navbar a {
   color: black;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -89,12 +215,12 @@ border: 2px solid red;
   height: 3px;
   background-color: black;
   margin-bottom: 4px;
-  
+
 }
 
 @media all and (max-width: 900px) {
   .navbar {
-    flex-direction:column;
+    flex-direction: column;
     position: relative;
   }
 
@@ -110,7 +236,7 @@ border: 2px solid red;
     width: 100%;
     text-align: center;
     padding-top: 10px;
-    display:none ;
+    display: none;
   }
 
   .nav-list .list-item {
@@ -123,14 +249,17 @@ border: 2px solid red;
     margin-top: 20px;
     margin-left: 20px;
   }
+
   .active {
-    display:block;
+    display: block;
   }
+
   .search-bar {
     display: none;
   }
 
 }
+
 /* hamburger menu navigation */
 
 .nav-icon-wrapper {
@@ -138,7 +267,9 @@ border: 2px solid red;
   cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 30px;
   height: 4px;
   background-color: #333;
@@ -148,8 +279,8 @@ border: 2px solid red;
 
 /* Rotate first bar */
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-8px 8px) ;
-  transform: rotate(-45deg) translate(-8px, 5.6px) ;
+  -webkit-transform: rotate(-45deg) translate(-8px 8px);
+  transform: rotate(-45deg) translate(-8px, 5.6px);
 }
 
 /* Fade out the second bar */
@@ -159,5 +290,6 @@ border: 2px solid red;
 
 /* Rotate last bar */
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px) ;
-  transform: rotate(45deg) translate(-8px, -5px) ; }
+  -webkit-transform: rotate(45deg) translate(-8px);
+  transform: rotate(45deg) translate(-8px, -5px);
+}
